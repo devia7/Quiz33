@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>TODO LIST</h1>
+
+      <div class="top-bar">
+        <div class="search-wrapper">
+          <input type="text" id="search" placeholder="Search note...">
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <button id="filterBtn">ALL</button>
+        <button id="themeToggle">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <ul id="todoList"></ul>
+
+      <div id="emptyState" class="empty">
+        <svg width="200" height="160" viewBox="0 0 200 160" class="empty-illustration">
+          <circle cx="100" cy="40" r="18"/>
+          <rect x="85" y="60" width="30" height="40" rx="6"/>
+          <line x1="92" y1="100" x2="80" y2="130"/>
+          <line x1="108" y1="100" x2="120" y2="130"/>
+          <line x1="115" y1="70" x2="140" y2="90"/>
+          <circle cx="155" cy="95" r="14" fill="none"/>
+          <line x1="165" y1="105" x2="178" y2="120"/>
+        </svg>
+        <p>Empty...</p>
+      </div>
+    </main>
+
+    <button id="addBtn" class="add-btn">+</button>
+  </div>
+
+  <div id="modalOverlay" class="overlay hidden">
+    <div class="modal">
+      <h2>NEW NOTE</h2>
+      <input type="text" id="noteInput" placeholder="Input your note...">
+
+      <div class="modal-actions">
+        <button id="cancelBtn">CANCEL</button>
+        <button id="applyBtn">APPLY</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
